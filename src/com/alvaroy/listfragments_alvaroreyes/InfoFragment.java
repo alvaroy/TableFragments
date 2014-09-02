@@ -17,7 +17,9 @@ public class InfoFragment extends Fragment {
 			Bundle savedInstanceState) {
 		View rootView = inflater.inflate(R.layout.showres, container, false);
 		name = (TextView) rootView.findViewById(R.id.nameView);
+		name.setText(this.getArguments().getString("Name"));
 		phone = (TextView) rootView.findViewById(R.id.phoneView);
+		phone.setText(this.getArguments().getString("Phone"));
 		return rootView;
 	}
 }
