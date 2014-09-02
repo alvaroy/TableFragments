@@ -41,6 +41,8 @@ public class Lista extends Fragment {
                 args.putString("Phone", listInfo.get(position).getPhone());
                 InfoFragment fragment = new InfoFragment();
                 fragment.setArguments(args);
+                FragmentTransaction ft = getActivity().getSupportFragmentManager().beginTransaction();
+                ft.replace(R.id.main, fragment).addToBackStack("Lista").commit();
             }        	
 		});
         
